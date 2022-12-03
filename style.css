@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(to bottom, #99b898 10%, #fecea8 20%, #ff847c 30%, #e84a5f 50%, #2a363b 90%,  #99b898 );
+    background-repeat:round;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main div {
+    padding-top: 15px;
+    margin-left: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+@keyframes efectoCrear {
+    from {
+        color: #fecea8;     
+    } to {
+        color: red;
+    }
+}
+
+main button {
+    margin-top: 10px;
+    transition: background-color 3s;
+    background-color: #2a363b;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    color: #fecea8;
+}
+
+main button:hover {
+    background-color: #ff847c;
+    animation-name: efectoCrear;
+    animation-duration: 4s;
+
+}
+
+main button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.detallesCard {
+    width: 18rem;
+    margin: 15px;
+    border: 0px;
+}
+
+.esconder {
+    display: none;
+}
+
+.btnEsconder {
+    color: #e84a5f;
+    background-color: #2a363b;
+}
+
+@keyframes btnEsconderCard {
+    from {
+        background-color: #2a363b;
+        color: #e84a5f;     
+    } to {
+        background-color: #e84a5f; 
+        color: #2a363b;
+    }
+}
+
+.btnEsconder:hover {
+    animation-name: btnEsconderCard;
+    animation-duration: 4s;
+}
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    margin-right: 20px;
+    color: #e84a5f;
+}
